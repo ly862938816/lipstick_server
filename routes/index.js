@@ -12,9 +12,36 @@ router.get('/', function (req, res, next) {
 router.get('/menuitems', function (req, res, next) {
     res.json({
         menuitems: [
-            { ButtonName: 'About' },
-            { ButtonName: 'Contact' },
-            { ButtonName: 'Login' }
+            {
+                buttonName: '可可系列',
+                iconString: "apps",
+                subItems: [
+                    {
+                        subItemName: " 滋润型 ",
+                        subItemString: " layers "
+                    },
+                    {
+                        subItemName: " 哑光型 ",
+                        subItemString: " line_style "
+                    },
+                    {
+                        subItemName: " 还是 ",
+                        subItemString: " content_paste "
+                    },
+                ]
+            },
+            {
+                buttonName: '水亮系列',
+                iconString: "view_day"
+            },
+            {
+                buttonName: '丝绒系列',
+                iconString: "view_carousel"
+            },
+            {
+                buttonName: '加入购物车',
+                iconString: "shopping_cart"
+            }
         ]
     });
 });
